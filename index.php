@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost', 'root', '', 'cosmetic_physician') or die('connection failed');
+require 'config.php';
 
 if (isset($_POST['submit'])) {
 
