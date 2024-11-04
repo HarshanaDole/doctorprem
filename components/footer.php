@@ -12,13 +12,13 @@
         <div class="box">
             <i class="fas fa-map-marker-alt"></i>
             <h3>address</h3>
-            <a href="https://www.google.com/myplace"><p>No 3, Alfred place, Colombo 03, Colombo, Sri Lanka</p></a>
+            <a href="https://www.google.com/myplace"><p>No 22 W A De Silva mawatha, Colombo 00600</p></a>
         </div>
 
         <div class="box">
             <i class="fas fa-clock"></i>
             <h3>opening hours</h3>
-            <p>07:00am to 10:00pm</p>
+            <p>12:30pm to 5:30pm</p>
         </div>
 
         <div class="box">

@@ -1,25 +1,4 @@
-<?php
 
-require 'config.php';
-
-if (isset($_POST['submit'])) {
-
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $number = $_POST['number'];
-    $date = $_POST['date'];
-
-    $insert = mysqli_query($conn, "INSERT INTO `contact`(name, email, number, date) 
-    VALUES('$name','$email','$number','$date')") or die('query failed');
-
-    if ($insert) {
-        $message[] = 'appointment made successfully!';
-    } else {
-        $message[] = 'failed to make appointment';
-    }
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +12,25 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <style>
+        input[type="number"] {
+            -moz-appearance: textfield; /* Firefox */
+            -webkit-appearance: none;   /* Chrome, Safari */
+            appearance: none;           /* Other browsers */
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -59,25 +57,80 @@ if (isset($_POST['submit'])) {
 
     </section>
 
-    <section class="ad-slider" id="ad-slider">
+    <!-- <section class="ad-slider" id="ad-slider">
         <div class="slides">
             <div class="slide">
                 <img src="img/ad-one.jpg" alt="Ad one" />
+            </div>
+            <div class="slide">
                 <img src="img/ad-two.jpg" alt="Ad two" />
+            </div>
+            <div class="slide">
                 <img src="img/ad-three.jpg" alt="Ad three" />
             </div>
             <div class="slide">
-                <img src="img/ad-4.jpg" alt="Ad one" />
-                <img src="img/ad-5.jpg" alt="Ad two" />
-                <img src="img/ad-6.jpg" alt="Ad three" />
+            <img src="img/ad-4.jpg" alt="Ad four" />
             </div>
             <div class="slide">
-                <img src="img/ad-7.jpg" alt="Ad one" />
-                <img src="img/ad-8.jpg" alt="Ad two" />
-                <img src="img/ad-9.jpg" alt="Ad three" />
+                <img src="img/ad-5.jpg" alt="Ad five" />
+            </div>
+            <div class="slide">
+                <img src="img/ad-6.jpg" alt="Ad six" />
+            </div>
+            <div class="slide">
+                <img src="img/ad-7.jpg" alt="Ad seven" />
+            </div>
+            <div class="slide">
+                <img src="img/ad-8.jpg" alt="Ad eight" />
+            </div>
+            <div class="slide">
+                <img src="img/ad-9.jpg" alt="Ad nine" />
+            </div>
+        </div>
+    </section> -->
+
+    <section class="ad-slider" id="ad-slider">
+    <div class="wrapper">
+        <!-- Initialize Swiper -->
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/ad-one.jpg" alt="ad" draggable="false">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/ad-two.jpg" alt="ad" draggable="false">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/ad-three.jpg" alt="ad" draggable="false">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/ad-4.jpg" alt="ad" draggable="false">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/ad-5.jpg" alt="ad" draggable="false">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/ad-6.jpg" alt="ad" draggable="false">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/ad-7.jpg" alt="ad" draggable="false">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/ad-8.jpg" alt="ad" draggable="false">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/ad-9.jpg" alt="ad" draggable="false">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
+
 
     <section class="about" id="about">
 
@@ -110,30 +163,25 @@ if (isset($_POST['submit'])) {
 
         <h1 class="heading-contact">make appointment</h1>
 
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-            <?php
-            if (isset($message)) {
-                foreach ($message as $message) {
-                    echo '<p class="message">' . $message . '</p>';
-                }
-            }
-            ?>
+        
+        <form id="appointmentForm">
+        <div id="message" class="message"></div>
             <span>name :</span>
             <input type="text" name="name" placeholder="enter your name" class="box" required>
             <span>email :</span>
             <input type="email" name="email" placeholder="enter your email" class="box" required>
             <span>number :</span>
             <input type="number" name="number" placeholder="enter your number" class="box" required>
-            <span>appointment date :</span>
-            <input type="datetime-local" name="date" class="box" required>
-            <input type="submit" value="make appointment" name="submit" class="link-btn animate-btn-contact">
+            <span>message :</span>
+            <textarea name="message" placeholder="enter your message" class="box" required></textarea>
+            <button type="submit" class="link-btn animate-btn-contact" id="submitButton">Make Appointment</button>
         </form>
 
     </section>
 
     <section class="services" id="services">
 
-        <h1 class="heading-services">more services</h1>
+        <h1 class="heading-services">our services</h1>
 
         <div class="box-container container">
 
@@ -179,7 +227,7 @@ if (isset($_POST['submit'])) {
 
     <section class="process-ser" id="process-ser">
 
-        <h1 class="heading-process">our services</h1>
+        <h1 class="heading-process">more services</h1>
 
         <div class="box-container container">
 
@@ -214,7 +262,7 @@ if (isset($_POST['submit'])) {
 
     </section>
 
-    <section class="reviews" id="reviews">
+    <!-- <section class="reviews" id="reviews">
 
         <h1 class="heading-rev"> satisfied clients </h1>
 
@@ -265,11 +313,82 @@ if (isset($_POST['submit'])) {
 
         </div>
 
-    </section>
+    </section> -->
 
     <?php include "components/footer.php" ?>
 
-    <script src="js/script.js"></script>
+    <script>
+    document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form from reloading the page
+
+        const submitButton = document.getElementById("submitButton"); // Get the submit button
+        submitButton.disabled = true; // Disable the button to prevent multiple clicks
+        submitButton.textContent = 'Sending...'; // Change button text
+
+        // Create a FormData object with the form fields
+        const formData = new FormData(this);
+
+        // Send the AJAX request
+        fetch("submit_appointment.php", {
+            method: "POST",
+            body: formData,
+        })
+        .then(response => response.json()) // Parse JSON response
+        .then(data => {
+            // Display message based on response
+            const messageDiv = document.getElementById("message");
+            messageDiv.textContent = data.message;
+            messageDiv.style.color = data.success ? "green" : "red";
+
+            if (data.success) {
+            document.getElementById("appointmentForm").reset();
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        })
+        .finally(() => {
+            // Re-enable the submit button after processing
+            submitButton.disabled = false;
+            submitButton.textContent = 'Make Appointment'; // Reset button text
+        });
+    });
+    </script>
+
+    <script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: true, // Enable continuous loop mode
+        autoplay: {
+            delay: 2500, // Time between slides (in ms)
+            disableOnInteraction: false, // Keep autoplay running after user interactions
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true, // Make pagination bullets clickable
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        slidesPerView: 3, // Number of slides to show at once
+        spaceBetween: 10, // Space between slides
+        breakpoints: {
+            640: {
+                slidesPerView: 2, // 1 slide for screens smaller than 640px
+            },
+            768: {
+                slidesPerView: 3, // 2 slides for screens larger than 640px
+            },
+            0: {
+                slidesPerView: 1, // 3 slides for larger screens
+            },
+        },
+    });
+</script>
+
+
+    <script src="js/script.js" defer></script>
 
 </body>
 

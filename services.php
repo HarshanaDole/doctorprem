@@ -36,7 +36,6 @@
                 <nav class="nav">
                     <a href="index.php">home</a>
                     <a href="services.php">services</a>
-                    <a href="index.php#reviews">reviews</a>
                     <a href="index.php#about">about</a>
                     <a href="#footer">contact</a>
                 </nav>

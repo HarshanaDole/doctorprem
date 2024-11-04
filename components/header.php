@@ -9,7 +9,7 @@
             <nav class="nav">
                 <a href="#home">home</a>
                 <a href="services.php">services</a>
-                <a href="#reviews">reviews</a>
+                <!-- <a href="#reviews">reviews</a> -->
                 <a href="#about">about</a>
                 <a href="#footer">contact</a>
             </nav>

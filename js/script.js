@@ -2,17 +2,18 @@ let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.header .nav');
 let header = document.querySelector('.header');
 
-const slidesContainer = document.querySelector(".ad-slider .slides");
-const slides = document.querySelectorAll(".ad-slider .slide");
-const totalSlides = slides.length;
-let index = 0;
+// const slidesContainer = document.querySelector(".ad-slider .slides");
+// const slides = document.querySelectorAll(".ad-slider .slide");
+// const totalSlides = slides.length;
+// let index = 0;
 
-function showNextSlide() {
-    index = (index + 1) % totalSlides;
-    slidesContainer.style.transform = `translateX(-${index * 100}%)`;
-}
+// function showNextSlide() {
+//     index = (index + 1) % totalSlides;
+//     slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+// }
 
-setInterval(showNextSlide, 3000); 
+// setInterval(showNextSlide, 3000); 
+
 
 
 menu.onclick = () =>{
@@ -108,21 +109,21 @@ const observerProcess = new IntersectionObserver(
 observerProcess.observe(processSection);
 
 
-// Process section
-const reviewSection = document.querySelector('.reviews');
+// // Process section
+// const reviewSection = document.querySelector('.reviews');
 
-const observerReview = new IntersectionObserver(
-    (entries, observerReview) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-                observerReview.unobserve(entry.target);
-            }
-        });
-    },
-    {
-        threshold: 0.2,
-    }
-);
+// const observerReview = new IntersectionObserver(
+//     (entries, observerReview) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 entry.target.classList.add('animate');
+//                 observerReview.unobserve(entry.target);
+//             }
+//         });
+//     },
+//     {
+//         threshold: 0.2,
+//     }
+// );
 
-observerReview.observe(reviewSection);
+// observerReview.observe(reviewSection);
