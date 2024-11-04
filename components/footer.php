@@ -29,6 +29,6 @@
 
     </div>
 
-    <div class="credit">&copy; 2023 <span>Dr. PremtheCosmeticPhysician.</span> All rights reserved.</div>
+    <div class="credit">&copy; 2024 <span>Dr. PremtheCosmeticPhysician.</span> All rights reserved.</div>
 
 </section>
