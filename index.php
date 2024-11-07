@@ -137,7 +137,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 image">
-                    <img src="img/about-img.jpg" class="w-100 mb-5 mb-md-0" alt="">
+                    <img src="img/elegance-logo.jpeg" class="w-100 mb-5 mb-md-0" alt="">
                 </div>
 
 
@@ -186,37 +186,37 @@
         <div class="box-container container">
 
             <div class="box-ser">
-                <img src="img/filler.png" alt="">
+            <img src="img/smile-line-fillers.png" alt="smile-line-fillers"/>
                 <h3>Smile Line Fillers</h3>
                 <p>Smooth and rejuvenate smile lines, reducing wrinkles for a more youthful look.</p>
             </div>
 
             <div class="box-ser">
-                <img src="img/laser.png" alt="">
+                <img src="img/laser-hair-reduction.png" alt="laser-hair-reduction">
                 <h3>Laser Hair Reduction</h3>
                 <p>Attain long-lasting reduction in unwanted hair growth for smoother skin.</p>
             </div>
 
             <div class="box-ser">
-                <img src="img/glow.png" alt="">
+                <img src="img/skin-glow-treatment.png" alt="skin-glow-treatment">
                 <h3>Skin Glowing Treatments</h3>
                 <p>Enhance the skin's radiance and promote a healthy, luminous complexion.</p>
             </div>
 
             <div class="box-ser">
-                <img src="img/scar.png" alt="">
+                <img src="img/keloid-scar-reduction.png" alt="keloid-scar-reduction">
                 <h3>Keloid Scar Reduction</h3>
                 <p>Minimize the appearance of raised and thickened scars for improved skin texture.</p>
             </div>
 
             <div class="box-ser">
-                <img src="img/stretch-marks.png" alt="">
+                <img src="img/stretch-mark-reduction.png" alt="stretch-mark-reduction">
                 <h3>Stretch Mark Reduction</h3>
                 <p>Reduce the visibility of stretch marks caused by rapid weight gain or growth.</p>
             </div>
 
             <div class="box-ser">
-                <img src="img/wart.png" alt="">
+                <img src="img/wart-removal.png" alt="warts-and-skin-tag-removal">
                 <h3>Warts & Skin Tags Removal</h3>
                 <p>Remove unwanted skin growths, such as warts and skin tags, for a smoother and blemish-free appearance.</p>
             </div>

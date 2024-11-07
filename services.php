@@ -12,9 +12,26 @@
 
     <style>
         .process {
+            position: relative;
             background: url(img/home-bg-5.jpg) no-repeat;
             background-size: cover;
             background-position: center;
+        }
+
+        .process::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .process * {
+            position: relative;
+            z-index: 2;
         }
 
         .process .box {
@@ -31,7 +48,7 @@
 
             <div class="row align-items-center justify-content-between">
 
-                <a href="index.php" class="logo">Dr.Prem<span>TheCosmeticPhysician.</span></a>
+                <a href="#home" class="logo"><img src="img/drprem-logo.png" alt="logo"></a>
 
                 <nav class="nav">
                     <a href="index.php">home</a>

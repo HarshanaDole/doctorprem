@@ -4,7 +4,8 @@
 
         <div class="row align-items-center justify-content-between">
 
-            <a href="#home" class="logo">Dr.Prem<span>TheCosmeticPhysician.</span></a>
+            <!-- <a href="#home" class="logo">Dr.Prem<span>TheCosmeticPhysician.</span></a> -->
+            <a href="#home" class="logo"><img src="img/drprem-logo.png" alt="logo"></a>
 
             <nav class="nav">
                 <a href="#home">home</a>
