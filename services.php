@@ -8,12 +8,14 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.1">
+    <link rel="icon" href="img/drprem-icon.png" type="image/png">
+    <!-- <link rel="preload" href="img/code one-black-01.webp" as="image"> -->
 
     <style>
         .process {
             position: relative;
-            background: url(img/home-bg-5.jpg) no-repeat;
+            background: url(img/service-bg-4.jpg) no-repeat;
             background-size: cover;
             background-position: center;
         }
@@ -48,7 +50,7 @@
 
             <div class="row align-items-center justify-content-between">
 
-                <a href="#home" class="logo"><img src="img/drprem-logo.png" alt="logo"></a>
+                <a href="index.php" class="logo"><img src="img/drprem-logo.png" alt="logo"></a>
 
                 <nav class="nav">
                     <a href="index.php">home</a>

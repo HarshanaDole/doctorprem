@@ -49,7 +49,7 @@ section {
 .heading {
     text-align: center;
     font-size: 4rem;
-    color: var(--black);
+    color: var(--white);
     text-transform: uppercase;
     font-weight: bolder;
     margin-top: 6rem;
@@ -194,7 +194,7 @@ section {
 
 .home {
     position: relative;
-    background: url(../img/home-bg-6-mirror.jpg) no-repeat;
+    background: url(../img/home-bg-6-mirror.webp) no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -393,15 +393,6 @@ section {
     100% {
         background-color: var(--blue);
         color: var(--white);
-    }
-}
-
-@keyframes boldLeftToRight {
-    0% {
-        background-position: 0% 100%;
-    }
-    100% {
-        background-position: 100% 100%;
     }
 }
 
@@ -1114,7 +1105,7 @@ section {
 
 .contact form .box {
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-bottom: 2rem;
     border-radius: .5rem;
     background-color: var(--white);
@@ -1164,6 +1155,7 @@ section {
 
 .footer {
     background-color: var(--light-bg);
+    min-height: 200px;
 }
 
 .footer .box-container {
@@ -1194,13 +1186,32 @@ section {
 }
 
 .footer .box-container .box p {
+    text-transform: none;
     font-size: 1.5rem;
     color: var(--light-color);
     background: linear-gradient(to right, var(--blue), var(--black) 50%, var(--light-color) 50%);
     -webkit-background-clip: text;
     color: transparent;
     background-size: 200%;
-    animation: boldLeftToRight 3s ease-in-out infinite;
+    animation: goldGlowEffect 4s ease-in-out infinite;
+}
+
+@keyframes goldGlowEffect {
+    0% {
+        background-position: -200% 0; /* Start from the far left */
+    }
+    100% {
+        background-position: 200% 0; /* Move to the far right */
+    }
+}
+
+@keyframes boldLeftToRight {
+    0% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
 .footer .box-container .box a p:hover {
@@ -1233,21 +1244,16 @@ section {
 }
 
 .credit-img-container {
-    height: 25px;
-    width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: .5rem;
 }
 
 .credit-img-container img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
-.box i {
+/* .box i {
     font-size: 20px;
     color: var(--white);
     margin-left: 5px;
@@ -1256,7 +1262,7 @@ section {
 .box :hover {
     color: var(--light-color);
 
-}
+} */
 
 
 
@@ -1279,6 +1285,10 @@ section {
         padding: 5rem 2rem;
     }
 
+    .heading {
+        margin-top: 8rem;
+    }
+
 }
 
 @media (max-width:768px) {
@@ -1298,6 +1308,10 @@ section {
 
     #menu-btn.fa-times {
         transform: rotate(180deg);
+    }
+
+    .header .logo {
+        width: 80px;
     }
 
     .header .nav {
@@ -1322,6 +1336,7 @@ section {
     .header .nav a {
         margin: 1rem 0;
         font-size: 2rem;
+        color: var(--black);
     }
 
     .home {
@@ -1332,6 +1347,13 @@ section {
         width: auto;
     }
 
+}
+
+@media (max-width:550px) {
+
+    .header .logo {
+        width: 60px;
+    }
 }
 
 @media (max-width:450px) {

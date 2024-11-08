@@ -11,7 +11,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.1">
+    <link rel="icon" href="img/drprem-icon.png" type="image/png">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <!-- Swiper JS -->
@@ -166,13 +167,13 @@
         
         <form id="appointmentForm">
         <div id="message" class="message"></div>
-            <span>name :</span>
+            <span>name</span>
             <input type="text" name="name" placeholder="enter your name" class="box" required>
-            <span>email :</span>
+            <span>email</span>
             <input type="email" name="email" placeholder="enter your email" class="box" required>
-            <span>number :</span>
+            <span>number</span>
             <input type="number" name="number" placeholder="enter your number" class="box" required>
-            <span>message :</span>
+            <span>message</span>
             <textarea name="message" placeholder="enter your message" class="box" required></textarea>
             <button type="submit" class="link-btn animate-btn-contact" id="submitButton">Make Appointment</button>
         </form>

@@ -31,11 +31,13 @@
 
     <div class="credit">&copy; 2024 <span>Dr. PremTheCosmeticPhysician.</span> All rights reserved.</div>
 
-    <div class="credits"><p>Developed by </p><div class="credit-img-container"><img src="img/code one-black-01.png" alt="Code:ONE logo" loading="lazy"></div></div>
     <!-- <div> Icons made by <a href="https://www.flaticon.com/authors/victoruler" title="Victoruler"> Victoruler </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
-                <div> Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
-                <div> Icons made by <a href="" title="surang"> surang </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
-                <div> Icons made by <a href="https://www.flaticon.com/authors/andinur" title="andinur"> andinur </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
-                <div> Icons made by <a href="https://www.flaticon.com/authors/iconfield" title="iconfield"> iconfield </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div> -->
+         <div> Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
+         <div> Icons made by <a href="" title="surang"> surang </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
+         <div> Icons made by <a href="https://www.flaticon.com/authors/andinur" title="andinur"> andinur </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
+         <div> Icons made by <a href="https://www.flaticon.com/authors/iconfield" title="iconfield"> iconfield </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div> -->
+
+    <div class="credits"><p>Developed by </p><div class="credit-img-container"><img src="img/code one-black-01-cp.webp" alt="Code:ONE logo" loading="lazy" width="100" height="25"></div></div>
+    
 
 </section>
